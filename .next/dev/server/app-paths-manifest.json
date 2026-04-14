@@ -1,6 +1,6 @@
 {
+  "/about/page": "app/about/page.js",
+  "/buy/page": "app/buy/page.js",
   "/contact/page": "app/contact/page.js",
-  "/loan-options/page": "app/loan-options/page.js",
-  "/page": "app/page.js",
-  "/refinance/page": "app/refinance/page.js"
+  "/page": "app/page.js"
 }
