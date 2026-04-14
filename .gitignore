@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
@@ -9,13 +9,21 @@
 # next.js
 /.next/
 /out/
+# El archivo de tipos de Next se genera automáticamente, 
+# pero a veces es útil mantenerlo. Si prefieres un repo limpio, déjalo aquí:
+# next-env.d.ts
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
+*.sqlite
+# Logs de n8n o procesos si usas localmente
+*.log
+.eslintcache
 
 # debug
 npm-debug.log*
@@ -24,16 +32,22 @@ yarn-error.log*
 pnpm-debug.log*
 
 # local env files
-.env*.local
+# Bloqueamos TODO lo que empiece por .env para evitar accidentes
 .env
+.env.*
+!.env.example
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # ide
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS metadata
+Thumbs.db
