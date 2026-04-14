@@ -1,0 +1,6 @@
+{
+  "/contact/page": "app/contact/page.js",
+  "/loan-options/page": "app/loan-options/page.js",
+  "/page": "app/page.js",
+  "/refinance/page": "app/refinance/page.js"
+}

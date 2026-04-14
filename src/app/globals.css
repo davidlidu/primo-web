@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #241C4F;
+  --primary-purple: #241C4F;
+  --cream: #E8E0DC;
+  --orange: #F36C37;
+  --gold: #FFBA00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-purple);
+  --color-cream: var(--cream);
+  --color-orange: var(--orange);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-poppins);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/* Custom gradient for decorative elements */
+.gradient-warm {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
