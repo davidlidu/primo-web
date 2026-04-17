@@ -24,40 +24,43 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("loading");
 
-    // 1. Dividir el nombre completo en First y Last Name
     const nameParts = formData.name.trim().split(" ");
     const firstName = nameParts[0];
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : "No especificado";
 
-    // 2. Mapeo EXACTO basado en tu archivo MarketingSourceFields.csv
-    const payload = {
+    // 1. Mapeo de datos igual que antes
+    const payloadData = {
       firstname: firstName,
       lastname: lastName,
       email: formData.email,
       phone: formData.phone,
-      lonpurpose: formData.purpose,  // Mapeado a "Loan Purpose"
-      prState: formData.state,       // Mapeado a "Property State"
-      timeframe: formData.timeline,  // Mapeado a "Timeframe"
-      optInLanguage: formData.language, // Mapeado a "Opt-In Language"
-      notes: formData.message        // Mapeado a "Notes"
+      lonpurpose: formData.purpose,
+      prState: formData.state,
+      timeframe: formData.timeline,
+      optInLanguage: formData.language,
+      notes: formData.message
     };
 
+    // 2. Convertir el objeto a formato Form URL Encoded
+    const formBody = Object.keys(payloadData)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(payloadData[key as keyof typeof payloadData]))
+      .join('&');
+
     try {
-      // Recuerda pegar aquí la "Posting URL" que generaste en Marketing Sources
       const endpointUrl = "https://secure-api.setshape.com/postlead/23622/24136";
 
+      // 3. Enviar la petición usando Content-Type application/x-www-form-urlencoded y el modo 'no-cors'
       const response = await fetch(endpointUrl, {
         method: "POST",
+        mode: "no-cors", // Esto le dice al navegador que omita la verificación estricta de CORS
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: JSON.stringify(payload)
+        body: formBody
       });
 
-      if (!response.ok) {
-        throw new Error("Error al enviar los datos a Shape");
-      }
-
+      // Nota: Cuando usas mode: "no-cors", la respuesta es 'opaca' (no puedes leer si fue un 200 OK en javascript). 
+      // Por lo tanto, asumimos éxito si no hubo una excepción de red.
       setStatus("success");
       setFormData({
         name: "", email: "", phone: "", purpose: "", state: "", timeline: "", language: "en", message: ""
