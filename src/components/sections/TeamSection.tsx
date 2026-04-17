@@ -1,4 +1,5 @@
 import { TEAM } from "@/lib/constants";
+import Image from "next/image";
 
 interface TeamSectionProps {
   lang?: "en" | "es";
@@ -34,14 +35,23 @@ export default function TeamSection({ lang = "en" }: TeamSectionProps) {
               {/* Photo placeholder */}
               {/* TODO: Add individual team member social links when available */}
               <div className="relative mb-4 mx-auto w-40 h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-[#E8E0DC] to-[#E8E0DC]/50 group-hover:shadow-xl transition-shadow">
-                {/* Placeholder avatar */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-[#241C4F]/10 flex items-center justify-center">
-                    <svg className="w-10 h-10 text-[#241C4F]/30" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                    </svg>
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  /* Placeholder avatar */
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-[#241C4F]/10 flex items-center justify-center">
+                      <svg className="w-10 h-10 text-[#241C4F]/30" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Info */}

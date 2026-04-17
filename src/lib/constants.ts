@@ -14,31 +14,31 @@ export const TEAM = [
     name: "Juan Velasquez",
     role: "Branch Manager",
     nmls: "NMLS #1284682",
-    image: "/images/team/juan-velasquez.jpg",
+    image: "",
   },
   {
     name: "Andres Llanos",
-    role: "Branch Manager",
-    nmls: "NMLS #000000", // TODO: Get real NMLS number
-    image: "/images/team/andres-llanos.jpg",
+    role: "Loan Officer",
+    nmls: "NMLS #1359605", // TODO: Get real NMLS number
+    image: "/images/team/andres-llanos.png",
   },
   {
     name: "Julian Avila",
     role: "Loan Officer",
-    nmls: "NMLS #000000", // TODO: Get real NMLS number
-    image: "/images/team/julian-avila.jpg",
+    nmls: "NMLS #1723719", // TODO: Get real NMLS number
+    image: "/images/team/julian.png",
   },
   {
     name: "Apolonia Sanmartin",
-    role: "Loan Officer",
-    nmls: "NMLS #000000", // TODO: Get real NMLS number
-    image: "/images/team/apolonia-sanmartin.jpg",
+    role: "Branch Manager",
+    nmls: "NMLS #342471", // TODO: Get real NMLS number
+    image: "/images/team/Apolonia.png",
   },
   {
     name: "Hernan Feria",
     role: "Loan Officer",
-    nmls: "NMLS #000000", // TODO: Get real NMLS number
-    image: "/images/team/hernan-feria.jpg",
+    nmls: "NMLS #2564306", // TODO: Get real NMLS number
+    image: "/images/team/hernan.png",
   },
 ];
 

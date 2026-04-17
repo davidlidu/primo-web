@@ -105,10 +105,10 @@ export default function Hero({ lang = "en" }: HeroProps) {
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               {/* Main card with gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#FFBA00] to-[#F36C37] rounded-3xl rotate-3 shadow-2xl shadow-[#F36C37]/30" />
-              <div className="absolute inset-0 bg-white rounded-3xl -rotate-3 shadow-xl flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-white rounded-3xl -rotate-3 shadow-xl flex items-center justify-center overflow-hidden bg-cover bg-center opacity-90" style={{ backgroundImage: "url('/images/florida-home-grande.jpeg')" }}>
                 {/* House Icon / Illustration */}
                 <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#E8E0DC] flex items-center justify-center">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#E8E0DC] flex items-center justify-center hidden">
                     <svg className="w-16 h-16 text-[#241C4F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
@@ -119,16 +119,16 @@ export default function Hero({ lang = "en" }: HeroProps) {
                   </div>
                   <div className="mt-8 grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-[#F36C37]">10+</div>
-                      <div className="text-xs text-[#241C4F]/60">{lang === "en" ? "Years Exp." : "Años Exp."}</div>
+                      <div className="text-6xl font-bold text-[#ffffff]">10+</div>
+                      <div className="text-xl font-bold text-[#ffffff]/70">{lang === "en" ? "Years Exp." : "Años Exp."}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-[#F36C37]">2</div>
-                      <div className="text-xs text-[#241C4F]/60">{lang === "en" ? "States" : "Estados"}</div>
+                      <div className="text-6xl font-bold text-[#ffffff]">2</div>
+                      <div className="text-xl font-bold text-[#ffffff]/70">{lang === "en" ? "States" : "Estados"}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-[#F36C37]">100%</div>
-                      <div className="text-xs text-[#241C4F]/60">{lang === "en" ? "Bilingual" : "Bilingüe"}</div>
+                      <div className="text-6xl font-bold text-[#ffffff]">100%</div>
+                      <div className="text-xl font-bold text-[#ffffff]/70">{lang === "en" ? "Bilingual" : "Bilingüe"}</div>
                     </div>
                   </div>
                 </div>
@@ -154,17 +154,17 @@ export default function Hero({ lang = "en" }: HeroProps) {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {(lang === "en"
               ? [
-                  { stat: "94%", label: "Pull-through rate", sub: "vs ~81% industry avg" },
-                  { stat: "~23", label: "Days avg to Clear to Close", sub: "vs ~36 industry avg" },
-                  { stat: "100%", label: "On-time closings", sub: "" },
-                  { stat: "91%", label: "Repeat client rate", sub: "" },
-                ]
+                { stat: "94%", label: "Pull-through rate", sub: "vs ~81% industry avg" },
+                { stat: "~23", label: "Days avg to Clear to Close", sub: "vs ~36 industry avg" },
+                { stat: "100%", label: "On-time closings", sub: "" },
+                { stat: "91%", label: "Repeat client rate", sub: "" },
+              ]
               : [
-                  { stat: "94%", label: "Tasa de cumplimiento", sub: "vs ~81% promedio de la industria" },
-                  { stat: "~23", label: "Días promedio a Clear to Close", sub: "vs ~36 promedio de la industria" },
-                  { stat: "100%", label: "Cierres a tiempo", sub: "" },
-                  { stat: "91%", label: "Tasa de clientes recurrentes", sub: "" },
-                ]
+                { stat: "94%", label: "Tasa de cumplimiento", sub: "vs ~81% promedio de la industria" },
+                { stat: "~23", label: "Días promedio a Clear to Close", sub: "vs ~36 promedio de la industria" },
+                { stat: "100%", label: "Cierres a tiempo", sub: "" },
+                { stat: "91%", label: "Tasa de clientes recurrentes", sub: "" },
+              ]
             ).map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-[#241C4F]">{item.stat}</div>

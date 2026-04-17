@@ -16,17 +16,55 @@ export default function ContactPage() {
     language: "en",
     message: "",
   });
+
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
+  // Lógica real de envío a Shape Software
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
 
+    // 1. Dividir el nombre completo en First y Last Name
+    const nameParts = formData.name.trim().split(" ");
+    const firstName = nameParts[0];
+    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : "No especificado";
+
+    // 2. Mapeo EXACTO basado en tu archivo MarketingSourceFields.csv
+    const payload = {
+      firstname: firstName,
+      lastname: lastName,
+      email: formData.email,
+      phone: formData.phone,
+      lonpurpose: formData.purpose,  // Mapeado a "Loan Purpose"
+      prState: formData.state,       // Mapeado a "Property State"
+      timeframe: formData.timeline,  // Mapeado a "Timeframe"
+      optInLanguage: formData.language, // Mapeado a "Opt-In Language"
+      notes: formData.message        // Mapeado a "Notes"
+    };
+
     try {
-      // Simulate API call - replace with actual form handling
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Recuerda pegar aquí la "Posting URL" que generaste en Marketing Sources
+      const endpointUrl = "https://secure-api.setshape.com/postlead/23622/24136";
+
+      const response = await fetch(endpointUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al enviar los datos a Shape");
+      }
+
       setStatus("success");
-    } catch {
+      setFormData({
+        name: "", email: "", phone: "", purpose: "", state: "", timeline: "", language: "en", message: ""
+      });
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
       setStatus("error");
     }
   };
@@ -43,7 +81,7 @@ export default function ContactPage() {
                 Get in Touch
               </span>
               <h1 className="text-4xl sm:text-5xl font-bold text-[#241C4F] mb-6">
-                Let&apos;s Start a Conversation
+                Let&apos;s Start a Conversation Now
               </h1>
               <p className="text-xl text-[#241C4F]/70 leading-relaxed">
                 Ready to take the next step? Fill out the form below, call us, or send a text. We&apos;re here to help—in English or Spanish.
@@ -61,7 +99,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-[#241C4F] mb-8">Contact Information</h2>
 
                 <div className="space-y-6">
-                  {/* TODO: Replace with real WhatsApp number */}
+                  {/* WhatsApp */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -77,6 +115,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Phone */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#F36C37] flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,6 +131,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Email */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#241C4F] flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,6 +146,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Location */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FFBA00] to-[#F36C37] flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
