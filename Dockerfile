@@ -22,5 +22,9 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 
+# Instalar curl en la imagen runner
+RUN apk add --no-cache curl
+
 EXPOSE 3000
+CMD ["sh", "-c", "node server.js & sleep 5 && curl -s http://localhost:3000 > /dev/null && wait"]
 CMD ["node", "server.js"]
