@@ -48,7 +48,7 @@ export default function Hero({ lang = "en" }: HeroProps) {
       <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFBA00] rounded-full hidden lg:block animate-pulse" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="mb-40 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Bilingual Headline */}
