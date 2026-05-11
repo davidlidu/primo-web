@@ -16,7 +16,7 @@ const organizationSchema = {
   name: "Primo Team",
   description: "Bilingual mortgage team powered by Rize Mortgage",
   url: "https://primoteam.com", // TODO: Replace with final domain before launch
-  telephone: "+15551234567", // TODO: Replace with real phone before launch
+  telephone: "+13053378781", // TODO: Replace with real phone before launch
   email: "info@primoteam.com", // TODO: Replace with real email before launch
   address: {
     "@type": "PostalAddress",

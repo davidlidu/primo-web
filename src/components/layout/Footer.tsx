@@ -68,7 +68,7 @@ export default function Footer({ lang = "en" }: FooterProps) {
               </a>
               {/* TODO: Replace with real WhatsApp number */}
               <a
-                href="https://wa.me/1XXXXXXXXXX"
+                href="https://wa.me/13053378781"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#25D366] transition-colors"

@@ -111,7 +111,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#241C4F]">Chat on WhatsApp</h3>
-                      <a href="https://wa.me/1XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="text-[#241C4F]/70 hover:text-[#25D366] transition-colors">
+                      <a href="https://wa.me/13053378781" target="_blank" rel="noopener noreferrer" className="text-[#241C4F]/70 hover:text-[#25D366] transition-colors">
                         Message us anytime
                       </a>
                       <p className="text-sm text-[#241C4F]/50 mt-1">Most clients prefer it</p>

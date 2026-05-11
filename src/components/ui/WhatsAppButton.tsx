@@ -7,7 +7,7 @@ interface WhatsAppButtonProps {
 }
 
 // TODO: Replace with real WhatsApp number
-const WHATSAPP_URL = "https://wa.me/1XXXXXXXXXX";
+const WHATSAPP_URL = "https://wa.me/13053378781";
 
 export default function WhatsAppButton({ lang = "en" }: WhatsAppButtonProps) {
   const [visible, setVisible] = useState(false);

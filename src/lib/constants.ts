@@ -1,7 +1,7 @@
 export const BRAND = {
   name: "Primo Team",
   tagline: "Powered by Rize Mortgage",
-  phone: "(555) 123-4567", // Update with real number
+  phone: "(305) 337-8781", // Update with real number
   email: "info@primoteam.com", // Update with real email
   nmls: "NMLS #1604663",
   companyNmls: "Rize Mortgage NMLS #1604663",
