@@ -59,7 +59,7 @@ const steps = {
   ],
 };
 
-export default function HowItWorks({ lang = "en" }: HowItWorksProps) {
+export default function HowItWorks({ lang = "es" }: HowItWorksProps) {
   const items = steps[lang];
 
   return (
@@ -128,7 +128,7 @@ export default function HowItWorks({ lang = "en" }: HowItWorksProps) {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href={lang === "en" ? "/contact" : "/es/contacto"}
+            href={lang === "es" ? "/contacto" : "/en/contact"}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#F36C37] text-white font-semibold rounded-full hover:bg-white hover:text-[#241C4F] transition-all duration-300 shadow-lg shadow-[#F36C37]/30"
           >
             {lang === "en" ? "Start Your Journey" : "Comienza Tu Camino"}

@@ -6,7 +6,7 @@ interface FooterProps {
   lang?: "en" | "es";
 }
 
-export default function Footer({ lang = "en" }: FooterProps) {
+export default function Footer({ lang = "es" }: FooterProps) {
   const links = NAV_LINKS[lang];
   const currentYear = new Date().getFullYear();
 
@@ -107,32 +107,32 @@ export default function Footer({ lang = "en" }: FooterProps) {
             </h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
-                <Link href={lang === "en" ? "/loan-options" : "/es/opciones-de-prestamo"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/opciones-de-prestamo" : "/en/loan-options"} className="hover:text-[#F36C37] transition-colors">
                   {lang === "en" ? "Conventional" : "Convencional"}
                 </Link>
               </li>
               <li>
-                <Link href={lang === "en" ? "/loan-options" : "/es/opciones-de-prestamo"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/opciones-de-prestamo" : "/en/loan-options"} className="hover:text-[#F36C37] transition-colors">
                   FHA
                 </Link>
               </li>
               <li>
-                <Link href={lang === "en" ? "/loan-options" : "/es/opciones-de-prestamo"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/opciones-de-prestamo" : "/en/loan-options"} className="hover:text-[#F36C37] transition-colors">
                   VA
                 </Link>
               </li>
               <li>
-                <Link href={lang === "en" ? "/bank-statement-loans" : "/es/prestamos-estados-de-cuenta"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/prestamos-estados-de-cuenta" : "/en/bank-statement-loans"} className="hover:text-[#F36C37] transition-colors">
                   {lang === "en" ? "Bank Statement" : "Estados de Cuenta"}
                 </Link>
               </li>
               <li>
-                <Link href={lang === "en" ? "/dscr-investor-loans" : "/es/prestamos-inversionistas-dscr"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/prestamos-inversionistas-dscr" : "/en/dscr-investor-loans"} className="hover:text-[#F36C37] transition-colors">
                   {lang === "en" ? "DSCR" : "Inversionistas"}
                 </Link>
               </li>
               <li>
-                <Link href={lang === "en" ? "/loan-options" : "/es/opciones-de-prestamo"} className="hover:text-[#F36C37] transition-colors">
+                <Link href={lang === "es" ? "/opciones-de-prestamo" : "/en/loan-options"} className="hover:text-[#F36C37] transition-colors">
                   {lang === "en" ? "Foreign National" : "Extranjeros"}
                 </Link>
               </li>
@@ -215,11 +215,11 @@ export default function Footer({ lang = "en" }: FooterProps) {
 
             {/* Legal Links */}
             <div className="flex items-center gap-4 text-xs text-white/50">
-              <Link href={lang === "en" ? "/privacy" : "/es/privacidad"} className="hover:text-white transition-colors">
+              <Link href={lang === "es" ? "/privacidad" : "/en/privacy"} className="hover:text-white transition-colors">
                 {lang === "en" ? "Privacy Policy" : "Política de Privacidad"}
               </Link>
               <span>|</span>
-              <Link href={lang === "en" ? "/terms" : "/es/terminos"} className="hover:text-white transition-colors">
+              <Link href={lang === "es" ? "/terminos" : "/en/terms"} className="hover:text-white transition-colors">
                 {lang === "en" ? "Terms of Use" : "Términos de Uso"}
               </Link>
             </div>

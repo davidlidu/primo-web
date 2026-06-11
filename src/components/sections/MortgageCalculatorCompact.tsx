@@ -18,7 +18,7 @@ const content = {
     years: "years",
     monthlyPayment: "Estimated Monthly Payment",
     seeFullBreakdown: "See full breakdown →",
-    calculatorHref: "/calculator",
+    calculatorHref: "/en/calculator",
     disclaimer:
       "This calculator provides estimates only and does not constitute a loan offer or commitment to lend. Actual rates, payments, and terms may vary. Contact a Primo Team advisor for a personalized quote. Primo Team, powered by Rize Mortgage. NMLS #1604663.",
   },
@@ -32,7 +32,7 @@ const content = {
     years: "años",
     monthlyPayment: "Pago Mensual Estimado",
     seeFullBreakdown: "Ver desglose completo →",
-    calculatorHref: "/es/calculadora",
+    calculatorHref: "/calculadora",
     disclaimer:
       "Esta calculadora proporciona solo estimados y no constituye una oferta de préstamo ni un compromiso de préstamo. Las tasas, pagos y términos reales pueden variar. Contacta a un asesor de Primo Team para una cotización personalizada. Primo Team, impulsado por Rize Mortgage. NMLS #1604663.",
   },
@@ -60,7 +60,7 @@ function parseNumericInput(value: string): number {
   return Number(value.replace(/[^0-9.]/g, "")) || 0;
 }
 
-export default function MortgageCalculatorCompact({ lang = "en" }: MortgageCalculatorCompactProps) {
+export default function MortgageCalculatorCompact({ lang = "es" }: MortgageCalculatorCompactProps) {
   const c = content[lang];
 
   const [homePrice, setHomePrice] = useState(350000);

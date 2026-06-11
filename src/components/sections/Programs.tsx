@@ -15,7 +15,7 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
-      href: "/buy",
+      href: "/en/buy",
       cta: "Get Pre-Approved",
     },
     {
@@ -27,7 +27,7 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
         </svg>
       ),
-      href: "/refinance",
+      href: "/en/refinance",
       cta: "Check Your Options",
     },
     {
@@ -39,7 +39,7 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
-      href: "/loan-options",
+      href: "/en/loan-options",
       cta: "Learn More",
     },
   ],
@@ -53,7 +53,7 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
-      href: "/es/comprar",
+      href: "/comprar",
       cta: "Pre-Aprobación",
     },
     {
@@ -65,7 +65,7 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
         </svg>
       ),
-      href: "/es/refinanciar",
+      href: "/refinanciar",
       cta: "Ver Opciones",
     },
     {
@@ -77,13 +77,13 @@ const programs = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
-      href: "/es/opciones-de-prestamo",
+      href: "/opciones-de-prestamo",
       cta: "Más Información",
     },
   ],
 };
 
-export default function Programs({ lang = "en" }: ProgramsProps) {
+export default function Programs({ lang = "es" }: ProgramsProps) {
   const items = programs[lang];
 
   return (

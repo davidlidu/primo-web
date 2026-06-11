@@ -14,21 +14,21 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Primo Team | Powered by Rize Mortgage",
-  description: "Your trusted bilingual mortgage team. Buy your home with clarity and confidence. Serving Florida and North Carolina.",
-  keywords: ["mortgage", "home loan", "bilingual", "Spanish", "Florida", "North Carolina", "first-time homebuyer"],
+  title: "Primo Team | Impulsado por Rize Mortgage",
+  description: "Tu equipo hipotecario bilingüe de confianza. Compra tu casa con claridad y confianza. Sirviendo Florida y Carolina del Norte.",
+  keywords: ["hipoteca", "préstamo de vivienda", "bilingüe", "español", "Florida", "Carolina del Norte", "comprador primerizo"],
   alternates: getAlternates("/"),
   openGraph: {
-    title: "Primo Team | Powered by Rize Mortgage",
-    description: "Your trusted bilingual mortgage team. Buy your home with clarity and confidence. Serving Florida and North Carolina.",
+    title: "Primo Team | Impulsado por Rize Mortgage",
+    description: "Tu equipo hipotecario bilingüe de confianza. Compra tu casa con claridad y confianza. Sirviendo Florida y Carolina del Norte.",
     type: "website",
-    locale: "en_US",
+    locale: "es_US",
     siteName: "Primo Team",
   },
   twitter: {
     card: "summary",
-    title: "Primo Team | Powered by Rize Mortgage",
-    description: "Your trusted bilingual mortgage team. Buy your home with clarity and confidence. Serving Florida and North Carolina.",
+    title: "Primo Team | Impulsado por Rize Mortgage",
+    description: "Tu equipo hipotecario bilingüe de confianza. Compra tu casa con claridad y confianza. Sirviendo Florida y Carolina del Norte.",
   },
 };
 
@@ -38,7 +38,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const lang = headersList.get("x-lang") || "en";
+  const lang = headersList.get("x-lang") || "es";
 
   return (
     <html lang={lang}>

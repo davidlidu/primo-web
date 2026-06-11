@@ -30,7 +30,7 @@ const content = {
     pmiNote: "PMI is automatically added when down payment is less than 20%. It goes away once you reach 20% equity.",
     ctaTitle: "Like what you see? Get pre-approved to lock in your rate.",
     ctaButton: "Get Pre-Approved",
-    ctaHref: "/contact",
+    ctaHref: "/en/contact",
     disclaimer:
       "This calculator provides estimates only and does not constitute a loan offer or commitment to lend. Actual rates, payments, and terms may vary. Contact a Primo Team advisor for a personalized quote. Primo Team, powered by Rize Mortgage. NMLS #1604663.",
     year30: "30 years",
@@ -59,7 +59,7 @@ const content = {
     pmiNote: "El PMI se agrega automáticamente cuando la cuota inicial es menor al 20%. Se elimina al alcanzar el 20% de equidad.",
     ctaTitle: "¿Te gusta lo que ves? Obtén tu pre-aprobación para asegurar tu tasa.",
     ctaButton: "Obtener Pre-Aprobación",
-    ctaHref: "/es/contacto",
+    ctaHref: "/contacto",
     disclaimer:
       "Esta calculadora proporciona solo estimados y no constituye una oferta de préstamo ni un compromiso de préstamo. Las tasas, pagos y términos reales pueden variar. Contacta a un asesor de Primo Team para una cotización personalizada. Primo Team, impulsado por Rize Mortgage. NMLS #1604663.",
     year30: "30 años",
@@ -90,7 +90,7 @@ function parseNumericInput(value: string): number {
   return Number(value.replace(/[^0-9.]/g, "")) || 0;
 }
 
-export default function MortgageCalculator({ lang = "en" }: MortgageCalculatorProps) {
+export default function MortgageCalculator({ lang = "es" }: MortgageCalculatorProps) {
   const c = content[lang];
 
   const [homePrice, setHomePrice] = useState(350000);

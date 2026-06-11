@@ -14,8 +14,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Primo Team",
-  description: "Equipo hipotecario bilingüe impulsado por Rize Mortgage",
-  url: "https://primoteam.com", // TODO: Replace with final domain before launch
+  description: "Bilingual mortgage team powered by Rize Mortgage",
+  url: "https://primoteam.com/en", // TODO: Replace with final domain before launch
   telephone: "+13053378781", // TODO: Replace with real phone before launch
   email: "info@primoteam.com", // TODO: Replace with real email before launch
   address: {
@@ -40,42 +40,42 @@ const reviewSchema = {
       author: { "@type": "Person", name: "Gustavo C." },
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "Trabajar con Primo Team fue una experiencia excepcional de principio a fin. Hicieron todo el proceso hipotecario fluido, transparente y sin estrés. Siempre me sentí informado y apoyado.",
+        "Working with the Primo Team was an exceptional experience from start to finish. They made the entire mortgage process smooth, transparent, and stress-free. I always felt informed and supported.",
     },
     {
       "@type": "Review",
       author: { "@type": "Person", name: "Arda S." },
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "El equipo fue más allá para encontrar la mejor opción de préstamo para mi situación. La comunicación fue excelente durante todo el proceso, y cerraron más rápido de lo que esperaba.",
+        "The team went above and beyond to find the best loan option for my situation. Communication was excellent throughout the process, and they closed faster than I expected.",
     },
     {
       "@type": "Review",
       author: { "@type": "Person", name: "Danait P." },
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "Estaba nervioso como comprador primerizo, pero Primo hizo todo muy claro. Explicaron cada paso en lenguaje simple y siempre estuvieron disponibles cuando tenía preguntas.",
+        "I was nervous as a first-time buyer, but Primo made everything so clear. They explained every step in plain language and were always available when I had questions.",
     },
   ],
 };
 
-export default function HomePageES() {
+export default function HomePage() {
   return (
     <>
       <JsonLd data={organizationSchema} />
       <JsonLd data={reviewSchema} />
-      <Header lang="es" />
+      <Header lang="en" />
       <main>
-        <Hero lang="es" />
-        <ValueTiles lang="es" />
-        <HowItWorks lang="es" />
-        <Programs lang="es" />
-        <MortgageCalculatorCompact lang="es" />
-        <Testimonials lang="es" />
-        <TeamSection lang="es" />
-        <LeadCapture lang="es" />
+        <Hero lang="en" />
+        <ValueTiles lang="en" />
+        <HowItWorks lang="en" />
+        <Programs lang="en" />
+        <MortgageCalculatorCompact lang="en" />
+        <Testimonials lang="en" />
+        <TeamSection lang="en" />
+        <LeadCapture lang="en" />
       </main>
-      <Footer lang="es" />
+      <Footer lang="en" />
     </>
   );
 }

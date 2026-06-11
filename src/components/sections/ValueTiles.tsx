@@ -69,7 +69,7 @@ const values = {
   ],
 };
 
-export default function ValueTiles({ lang = "en" }: ValueTilesProps) {
+export default function ValueTiles({ lang = "es" }: ValueTilesProps) {
   const items = values[lang];
 
   return (

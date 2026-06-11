@@ -7,7 +7,7 @@ interface HeroProps {
   lang?: "en" | "es";
 }
 
-export default function Hero({ lang = "en" }: HeroProps) {
+export default function Hero({ lang = "es" }: HeroProps) {
   const content = {
     en: {
       headline: "Buy with clarity and confidence",
@@ -73,13 +73,13 @@ export default function Hero({ lang = "en" }: HeroProps) {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button href={lang === "en" ? "/contact" : "/es/contacto"} variant="primary" size="lg">
+              <Button href={lang === "es" ? "/contacto" : "/en/contact"} variant="primary" size="lg">
                 {c.cta1}
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <Button href={lang === "en" ? "/contact" : "/es/contacto"} variant="outline" size="lg">
+              <Button href={lang === "es" ? "/contacto" : "/en/contact"} variant="outline" size="lg">
                 {c.cta2}
               </Button>
             </div>

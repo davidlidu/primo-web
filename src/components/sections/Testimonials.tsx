@@ -45,7 +45,7 @@ const testimonials = {
   ],
 };
 
-export default function Testimonials({ lang = "en" }: TestimonialsProps) {
+export default function Testimonials({ lang = "es" }: TestimonialsProps) {
   const items = testimonials[lang];
 
   return (

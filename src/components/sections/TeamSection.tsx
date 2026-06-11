@@ -5,7 +5,7 @@ interface TeamSectionProps {
   lang?: "en" | "es";
 }
 
-export default function TeamSection({ lang = "en" }: TeamSectionProps) {
+export default function TeamSection({ lang = "es" }: TeamSectionProps) {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background decoration */}
@@ -65,7 +65,7 @@ export default function TeamSection({ lang = "en" }: TeamSectionProps) {
         {/* Team CTA */}
         <div className="mt-12 text-center">
           <a
-            href={lang === "en" ? "/about" : "/es/nosotros"}
+            href={lang === "es" ? "/nosotros" : "/en/about"}
             className="inline-flex items-center gap-2 text-[#241C4F] font-semibold hover:text-[#F36C37] transition-colors"
           >
             {lang === "en" ? "Learn more about our team" : "Conoce más sobre nuestro equipo"}

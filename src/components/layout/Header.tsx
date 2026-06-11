@@ -11,29 +11,29 @@ interface HeaderProps {
 }
 
 const LOAN_SUB_LINKS = {
-  en: [
-    { label: "Bank Statement Loans", href: "/bank-statement-loans" },
-    { label: "DSCR Investor Loans", href: "/dscr-investor-loans" },
-  ],
   es: [
-    { label: "Préstamos con Estados de Cuenta", href: "/es/prestamos-estados-de-cuenta" },
-    { label: "Préstamos DSCR", href: "/es/prestamos-inversionistas-dscr" },
+    { label: "Préstamos con Estados de Cuenta", href: "/prestamos-estados-de-cuenta" },
+    { label: "Préstamos DSCR", href: "/prestamos-inversionistas-dscr" },
+  ],
+  en: [
+    { label: "Bank Statement Loans", href: "/en/bank-statement-loans" },
+    { label: "DSCR Investor Loans", href: "/en/dscr-investor-loans" },
   ],
 };
 
 const LOAN_OPTIONS_HREF = {
-  en: "/loan-options",
-  es: "/es/opciones-de-prestamo",
+  es: "/opciones-de-prestamo",
+  en: "/en/loan-options",
 };
 
-export default function Header({ lang = "en" }: HeaderProps) {
+export default function Header({ lang = "es" }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const links = NAV_LINKS[lang];
-  const alternateLang = lang === "en" ? "es" : "en";
+  const alternateLang = lang === "es" ? "en" : "es";
   const alternateHref =
-    lang === "en"
-      ? ROUTE_MAP[pathname] ?? "/es"
+    lang === "es"
+      ? ROUTE_MAP[pathname] ?? "/en"
       : ROUTE_MAP_REVERSE[pathname] ?? "/";
 
   const loanSubLinks = LOAN_SUB_LINKS[lang];
@@ -44,7 +44,7 @@ export default function Header({ lang = "en" }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={lang === "en" ? "/" : "/es"} className="flex-shrink-0">
+          <Link href={lang === "es" ? "/" : "/en"} className="flex-shrink-0">
             <Image
               src="/images/primo-logo-color.svg"
               alt="Primo Team"
@@ -80,7 +80,7 @@ export default function Header({ lang = "en" }: HeaderProps) {
                           href={link.href}
                           className="block px-4 py-2.5 text-sm text-[#241C4F] hover:bg-[#E8E0DC]/50 hover:text-[#F36C37] transition-colors font-medium"
                         >
-                          {lang === "en" ? "All Loan Options" : "Todas las Opciones"}
+                          {lang === "es" ? "Todas las Opciones" : "All Loan Options"}
                         </Link>
                         <div className="border-t border-[#E8E0DC] my-1" />
                         {loanSubLinks.map((sub) => (
@@ -121,15 +121,15 @@ export default function Header({ lang = "en" }: HeaderProps) {
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              {alternateLang === "es" ? "Español" : "English"}
+              {alternateLang === "en" ? "English" : "Español"}
             </Link>
 
             {/* CTA Button */}
             <Link
-              href={lang === "en" ? "/contact" : "/es/contacto"}
+              href={lang === "es" ? "/contacto" : "/en/contact"}
               className="px-6 py-2.5 bg-[#F36C37] text-white font-semibold text-sm rounded-full hover:bg-[#241C4F] transition-all duration-300 shadow-lg shadow-[#F36C37]/20 hover:shadow-[#241C4F]/20"
             >
-              {lang === "en" ? "Get Started" : "Comenzar"}
+              {lang === "es" ? "Comenzar" : "Get Started"}
             </Link>
           </div>
 
@@ -187,13 +187,13 @@ export default function Header({ lang = "en" }: HeaderProps) {
                   href={alternateHref}
                   className="flex-1 py-3 text-center text-[#241C4F] font-medium border border-[#E8E0DC] rounded-full"
                 >
-                  {alternateLang === "es" ? "Español" : "English"}
+                  {alternateLang === "en" ? "English" : "Español"}
                 </Link>
                 <Link
-                  href={lang === "en" ? "/contact" : "/es/contacto"}
+                  href={lang === "es" ? "/contacto" : "/en/contact"}
                   className="flex-1 py-3 text-center bg-[#F36C37] text-white font-semibold rounded-full"
                 >
-                  {lang === "en" ? "Get Started" : "Comenzar"}
+                  {lang === "es" ? "Comenzar" : "Get Started"}
                 </Link>
               </div>
             </nav>

@@ -6,7 +6,7 @@ interface LeadCaptureProps {
   lang?: "en" | "es";
 }
 
-export default function LeadCapture({ lang = "en" }: LeadCaptureProps) {
+export default function LeadCapture({ lang = "es" }: LeadCaptureProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

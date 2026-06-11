@@ -1,15 +1,15 @@
 import { ROUTE_MAP, ROUTE_MAP_REVERSE } from "./constants";
 
-// TODO: Replace relative URLs with absolute URLs (e.g., https://primoteam.com/about) before launch
+// TODO: Replace relative URLs with absolute URLs (e.g., https://primoteam.com/nosotros) before launch
 export function getAlternates(path: string) {
-  const isSpanish = path.startsWith("/es");
-  const enPath = isSpanish ? (ROUTE_MAP_REVERSE[path] ?? "/") : path;
-  const esPath = isSpanish ? path : (ROUTE_MAP[path] ?? "/es");
+  const isEnglish = path.startsWith("/en");
+  const esPath = isEnglish ? (ROUTE_MAP_REVERSE[path] ?? "/") : path;
+  const enPath = isEnglish ? path : (ROUTE_MAP[path] ?? "/en");
 
   return {
     languages: {
-      en: enPath,
       es: esPath,
+      en: enPath,
     },
   };
 }

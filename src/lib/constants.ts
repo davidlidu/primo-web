@@ -43,47 +43,47 @@ export const TEAM = [
 ];
 
 export const NAV_LINKS = {
-  en: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Buy a Home", href: "/buy" },
-    { label: "Refinance", href: "/refinance" },
-    { label: "Loan Options", href: "/loan-options" },
-    { label: "Resources", href: "/resources" },
-    { label: "Calculator", href: "/calculator" },
-    { label: "Contact", href: "/contact" },
-  ],
   es: [
-    { label: "Inicio", href: "/es" },
-    { label: "Nosotros", href: "/es/nosotros" },
-    { label: "Comprar", href: "/es/comprar" },
-    { label: "Refinanciar", href: "/es/refinanciar" },
-    { label: "Opciones", href: "/es/opciones-de-prestamo" },
-    { label: "Recursos", href: "/es/recursos" },
-    { label: "Calculadora", href: "/es/calculadora" },
-    { label: "Contacto", href: "/es/contacto" },
+    { label: "Inicio", href: "/" },
+    { label: "Nosotros", href: "/nosotros" },
+    { label: "Comprar", href: "/comprar" },
+    { label: "Refinanciar", href: "/refinanciar" },
+    { label: "Opciones", href: "/opciones-de-prestamo" },
+    { label: "Recursos", href: "/recursos" },
+    { label: "Calculadora", href: "/calculadora" },
+    { label: "Contacto", href: "/contacto" },
+  ],
+  en: [
+    { label: "Home", href: "/en" },
+    { label: "About", href: "/en/about" },
+    { label: "Buy a Home", href: "/en/buy" },
+    { label: "Refinance", href: "/en/refinance" },
+    { label: "Loan Options", href: "/en/loan-options" },
+    { label: "Resources", href: "/en/resources" },
+    { label: "Calculator", href: "/en/calculator" },
+    { label: "Contact", href: "/en/contact" },
   ],
 };
 
-// Maps English paths to Spanish paths for language switching
+// Maps Spanish paths (default) to English paths for language switching
 export const ROUTE_MAP: Record<string, string> = {
-  "/": "/es",
-  "/about": "/es/nosotros",
-  "/buy": "/es/comprar",
-  "/refinance": "/es/refinanciar",
-  "/loan-options": "/es/opciones-de-prestamo",
-  "/resources": "/es/recursos",
-  "/contact": "/es/contacto",
-  "/privacy": "/es/privacidad",
-  "/terms": "/es/terminos",
-  "/calculator": "/es/calculadora",
-  "/bank-statement-loans": "/es/prestamos-estados-de-cuenta",
-  "/dscr-investor-loans": "/es/prestamos-inversionistas-dscr",
+  "/": "/en",
+  "/nosotros": "/en/about",
+  "/comprar": "/en/buy",
+  "/refinanciar": "/en/refinance",
+  "/opciones-de-prestamo": "/en/loan-options",
+  "/recursos": "/en/resources",
+  "/contacto": "/en/contact",
+  "/privacidad": "/en/privacy",
+  "/terminos": "/en/terms",
+  "/calculadora": "/en/calculator",
+  "/prestamos-estados-de-cuenta": "/en/bank-statement-loans",
+  "/prestamos-inversionistas-dscr": "/en/dscr-investor-loans",
 };
 
-// Reverse map: Spanish paths → English paths
+// Reverse map: English paths → Spanish paths
 export const ROUTE_MAP_REVERSE: Record<string, string> = Object.fromEntries(
-  Object.entries(ROUTE_MAP).map(([en, es]) => [es, en])
+  Object.entries(ROUTE_MAP).map(([es, en]) => [en, es])
 );
 
 export const CONFORMING_PRODUCTS = [
